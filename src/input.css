@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.trans{
+    @apply transition ease-out duration-700
+}
