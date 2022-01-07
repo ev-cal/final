@@ -10,6 +10,11 @@ burger.addEventListener('click',() => {
 })
 
 var currentDate=new Date();
+
+var year=currentDate.getFullYear();
+document.getElementById("year").value=year
+
+
 var month=currentDate.getMonth();
 if (month==0) {
     document.getElementById("month").value="January"
@@ -47,5 +52,10 @@ else if (month==10) {
 else if (month==11) {
     document.getElementById("month").value="December"
 }
+else{
+    document.getElementById("month").value="Loading"
+}
+
+
 
 
