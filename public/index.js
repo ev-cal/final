@@ -58,7 +58,7 @@ else{
 }
 
 function next_month(){
-    if(window.k>=0 && window.k<=11){
+    if(window.k>=0 && window.k<=13){
     window.k=window.k+1;
     if (window.k==1) {
         document.getElementById("month").value="February"
@@ -92,7 +92,13 @@ function next_month(){
     }
     else if (window.k==11) {
         document.getElementById("month").value="December"
-    }}
+    }else if(window.k==12){
+        document.getElementById("month").value="January"
+    }else{
+        window.k=0;
+        next_month();
+    }
+}
 
     
     
