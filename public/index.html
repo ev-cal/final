@@ -56,8 +56,7 @@
                 <form action="">
                     <div class="flex mt-16 justify-center md:mx-36 gap-1">
                         <!-- date title -->
-                        <div
-                            class="w-auto px-2 trans border-2 border-gray-700 bg-gray-700 text-white hover:bg-white hover:text-gray-700 rounded-lg text-center hover:cursor-pointer">
+                        <div onclick="prev_month()" class="w-auto px-2 trans border-2 border-gray-700 bg-gray-700 text-white hover:bg-white hover:text-gray-700 rounded-lg text-center hover:cursor-pointer">
                             <!-- previous -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
@@ -86,7 +85,7 @@
                     <div class="mt-6 flex justify-center gap-1">
                         
                         <!-- previous -->
-                        <div
+                        <div onclick="prev_year()"
                             class="w-auto px-2 trans border-2 border-gray-700 bg-gray-700 text-white hover:bg-white hover:text-gray-700 rounded-lg text-center hover:cursor-pointer">
 
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -100,7 +99,7 @@
                         <input class="bg-gray-700 text-white w-16 border-2 border-gray-700 rounded-lg text-center pointer-events-none" type="text" id="year">
 
                         <!-- Next -->
-                        <div
+                        <div onclick="next_year()"
                             class="w-auto px-2 trans border-2 border-gray-700 bg-gray-700 text-white hover:bg-white hover:text-gray-700 rounded-lg text-center hover:cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
