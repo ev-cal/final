@@ -12,7 +12,10 @@ burger.addEventListener('click', () => {
 var currentDate = new Date();
 
 var year = currentDate.getFullYear();
+
+var cp_year =currentDate.getFullYear();
 var y = year;
+document.getElementById("cpyear").value= cp_year
 document.getElementById("year").value = year
 
 
