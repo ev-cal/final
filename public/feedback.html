@@ -12,31 +12,35 @@
 <body class="antialiased bg-gray-100">
 
     <div>
-        <div class="bg-gray-700 flex justify-between py-4 h-auto p-2 shadow-gray-700 shadow-md md:py-6">
-            <div class="transform hover:scale-105">
-                <a class="text-white text-lg md:ml-32 md:text-2xl font-bold" href="#">Event Calendar</a>
-            </div>
-            <nav class="">
-                <svg id="burger" xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 text-white md:hidden hover:cursor-pointer" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-                <div id="menu" class="text-white hidden md:block">
-                    <ul class="md:flex md:gap-3 md:mr-32 md:text-lg">
-                        <li>
-                            <div class="transform hover:scale-110"><a href="index.html">Home</a></div>
-                        </li>
-                        <li>
-                            <div class="transform hover:scale-110"><a href="about.html">About</a></div>
-                        </li>
-                        <li>
-                            <div class="transform hover:scale-110"><a href="feedback.html">Feedback</a></div>
-                        </li>
-                    </ul>
+        <div class="w-full fixed top-0">
+            <div class="bg-gray-700 flex justify-between py-4 h-auto p-2 shadow-gray-600 shadow-md md:py-6">
+                <div class="transform hover:scale-105">
+                    <a class="text-white text-lg md:ml-32 md:text-2xl font-bold" href="index.html">Event Calendar</a>
                 </div>
-            </nav>
+                <nav class="">
+                    <svg id="burger" xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6 text-white md:hidden hover:cursor-pointer" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <div id="menu" class="text-white hidden md:block">
+                        <ul class="md:flex md:gap-3 md:mr-32 md:text-lg">
+                            <li>
+                                <div class="transform hover:scale-110"><a href="index.html">Home</a></div>
+                            </li>
+                            <li>
+                                <div class="transform hover:scale-110"><a href="about.html">About</a></div>
+                            </li>
+                            <li>
+                                <div class="transform hover:scale-110"><a href="feedback.html">Feedback</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </div>
+
         <div class="w-full min-h-screen flex justify-center items-center">
             <div
                 class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:items-stretch md:space-x-12 bg-gray-700 w-full max-w-4xl p-8 sm:px-12 sm:py-10 rounded-xl shadow-lg text-white overflow-hidden">
