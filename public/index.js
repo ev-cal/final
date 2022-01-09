@@ -142,6 +142,7 @@ function prev_month(){
         document.getElementById("month").value="December"
     }else if(document.getElementById("month").value=="February"){
         document.getElementById("month").value="January"
+        
     }else if(document.getElementById("month").value=="March"){
         document.getElementById("month").value="February"
     }else if(document.getElementById("month").value=="April"){
