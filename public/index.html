@@ -54,7 +54,7 @@
         <div>
             <!-- calendar section -->
 
-            <div class="hidden">
+            <div class="">
                 <!-- Monthly view -->
                 <form action="">
                     <div class="flex mt-16 justify-center md:mx-36 gap-1">
@@ -1007,12 +1007,37 @@
                 </form>
 
             </div><!-- end of monthly view-->
-
-            <div class="p-20 h-full w-full"><!--Daily view-->
-                <div class="bg-gray-700 text-white">
-                        <input type="text" class="bg-gray-700 text-white" id="dv-month">
+            
+            <div class="mt-8 px-8 hidden">
+                <!--Daily view-->
+                <div class="bg-gray-700 text-white border-2 border-gray-700 rounded-lg font-bold">
+                    <div class="flex gap-5 justify-center mt-2">
+                        
+                        <div>
+                            <label for="" id="dv-day"></label>
+                        </div>
+                        <div>
+                            
+                            <label for="" id="dv-month"></label>
+                            
+                        </div>
+                        <div>
+                            <label for="" id="dv-year"></label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-center">
+                            <label for="">Event Title</label><br>
+                            <label for="" class="text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</label><br>
+                            <label for="">Venue</label><br>
+                            <label for="">Time</label>
+                        </div>
+                    </div>
                 </div>
-            </div>
+              
+
+            
+        </div>
 
         </div>
 
@@ -1060,23 +1085,25 @@
                     </div>
                 </div>
 
-            <div class="p-4">
-                <label for="" class="text-lg font-bold">Navigate</label>
-                <div class="mt-2 text-sm">
-                    <a href="" class="opacity-70 hover:opacity-100">About</a><br>
-                    <a href="" class="opacity-70 hover:opacity-100">Feedback</a><br>
-                    <a href="" class="opacity-70 hover:opacity-100">Search</a><br>
-                    <a href="" class="opacity-70 hover:opacity-100">Signup/Login</a>
+                <div class="p-4">
+                    <label for="" class="text-lg font-bold">Navigate</label>
+                    <div class="mt-2 text-sm">
+                        <a href="" class="opacity-70 hover:opacity-100">About</a><br>
+                        <a href="" class="opacity-70 hover:opacity-100">Feedback</a><br>
+                        <a href="" class="opacity-70 hover:opacity-100">Search</a><br>
+                        <a href="" class="opacity-70 hover:opacity-100">Signup/Login</a>
+                    </div>
                 </div>
+
             </div>
-            
-            </div> 
 
             <div class="text-center opacity-50">
-                <label for="">Copyright © <span><input type="text" id="cpyear" class="bg-gray-700 pointer-events-none w-10"></span> All rights reserved</label>
+                <label for="">Copyright © <span><input type="text" id="cpyear"
+                            class="bg-gray-700 pointer-events-none w-10"></span> All rights reserved</label>
             </div>
 
-        </div> <!--footer end-->
+        </div>
+        <!--footer end-->
     </div> <!-- main div end-->
     <script src="index.js"></script>
 </body>
