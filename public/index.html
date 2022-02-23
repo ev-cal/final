@@ -42,17 +42,17 @@
         <div class="flex gap-3 mt-40 px-4 md:mx-36 ">
             <!--view buttons -->
 
-            <div
-                class="trans border-4 rounded-3xl bg-gray-700 border-gray-700 text-lg text-white w-1/2 text-center md:h-20 hover:cursor-pointer hover:bg-white hover:text-gray-700">
-                <h1 class="md:mt-4 md:text-2xl">Upcoming Events</h1>
+            <div class="p-4 sm:p-3 trans border-4 rounded-lg md:rounded-3xl bg-gray-700 border-gray-700  text-lg text-white w-1/2 text-center  md:h-20 hover:cursor-pointer hover:bg-white hover:text-gray-700"
+                onclick="upcomingView()">
+                <h1 class="md:text-2xl md:mt-1">Upcoming Events</h1>
             </div>
-            <div
-                class="trans border-4 rounded-3xl bg-gray-700 border-gray-700 text-lg text-white w-1/2 text-center md:h-20 hover:cursor-pointer hover:bg-white hover:text-gray-700" onclick="monthClick()">
-                <h1 class="md:mt-4 md:text-2xl">Monthly View</h1>
+            <div class="p-4 sm:p-3 trans border-4 rounded-lg md:rounded-3xl bg-gray-700 border-gray-700  text-lg text-white w-1/2 text-center md:h-20 hover:cursor-pointer hover:bg-white hover:text-gray-700"
+                onclick="monthClick()">
+                <h1 class="md:text-2xl md:mt-1">Monthly View</h1>
             </div>
-            <div
-                class="trans border-4 rounded-3xl bg-gray-700 border-gray-700 text-lg text-white w-1/2 text-center md:h-20 hover:cursor-pointer hover:bg-white hover:text-gray-700" onclick="dailyClick()">
-                <h1 class="md:mt-4 md:text-2xl">Today's Events</h1>
+            <div class="p-4 sm:p-3 trans border-4 rounded-lg md:rounded-3xl bg-gray-700 border-gray-700 text-lg text-white w-1/2 text-center md:h-20 hover:cursor-pointer hover:bg-white hover:text-gray-700"
+                onclick="dailyClick()">
+                <h1 class="md:text-2xl md:mt-1">Today's Events</h1>
             </div>
         </div>
         <div>
@@ -61,12 +61,43 @@
             <div class="" id="mon-view">
                 <!-- Monthly view -->
                 <form action="">
-                    <div class="flex mt-16 justify-center md:mx-36 gap-1">
+                    <!-- year -->
+                    <div class="mt-14 flex justify-center gap-1">
+
+                        <!-- previous -->
+                        <div onclick="prev_year()"
+                            class="w-auto px-2 trans border-2 border-gray-700 bg-gray-700 text-white hover:bg-white hover:text-gray-700 rounded-lg text-center hover:cursor-pointer md:h-16 md:w-20">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10 md:my-2 md:mx-2"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                            </svg>
+
+                        </div>
+
+                        <input
+                            class="bg-gray-700 text-white w-36 h-10 border-2 border-gray-700 rounded-lg text-center pointer-events-none text-lg md:h-16 md:w-60 md:text-2xl"
+                            type="text" id="year">
+
+                        <!-- Next -->
+                        <div onclick="next_year()"
+                            class="w-auto px-2 trans border-2 border-gray-700 bg-gray-700 text-white hover:bg-white hover:text-gray-700 rounded-lg text-center hover:cursor-pointer md:h-16 md:w-20">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10 md:my-2 md:mx-2"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                            </svg>
+                        </div>
+
+                    </div>
+
+                    <div class="flex mt-8 justify-center md:mx-36 gap-1">
                         <!-- date title -->
                         <div onclick="prev_month()"
                             class="w-auto px-2 trans border-2 border-gray-700 bg-gray-700 text-white hover:bg-white hover:text-gray-700 rounded-lg text-center hover:cursor-pointer md:h-16 md:w-20">
                             <!-- previous -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-10 md:w-10 md:my-2 md:mx-2"
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10 md:my-2 md:mx-2 "
                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
@@ -76,12 +107,12 @@
                         <div class="">
                             <!-- Month -->
                             <input type="text" id="month"
-                                class="text-center bg-gray-700 pointer-events-none border-2 border-gray-700 text-white rounded-lg md:w-60 md:h-16 md:text-2xl">
+                                class="text-center bg-gray-700 pointer-events-none border-2 border-gray-700 text-white text-lg rounded-lg h-10 w-36 md:w-60 md:h-16 md:text-2xl">
                         </div>
                         <div onclick="next_month()"
                             class="w-auto px-2 trans border-2 border-gray-700 bg-gray-700 text-white hover:bg-white hover:text-gray-700 rounded-lg text-center hover:cursor-pointer md:h-16 md:w-20">
                             <!-- Next -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-10 md:w-10 md:my-2 md:mx-2"
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10 md:my-2 md:mx-2"
                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M13 5l7 7-7 7M5 5l7 7-7 7" />
@@ -91,36 +122,6 @@
 
                     </div>
 
-                    <!-- year -->
-                    <div class="mt-6 flex justify-center gap-1">
-
-                        <!-- previous -->
-                        <div onclick="prev_year()"
-                            class="w-auto px-2 trans border-2 border-gray-700 bg-gray-700 text-white hover:bg-white hover:text-gray-700 rounded-lg text-center hover:cursor-pointer">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
-                            </svg>
-
-                        </div>
-
-                        <input
-                            class="bg-gray-700 text-white w-16 border-2 border-gray-700 rounded-lg text-center pointer-events-none md:h-10 md:w-20 md:text-xl"
-                            type="text" id="year">
-
-                        <!-- Next -->
-                        <div onclick="next_year()"
-                            class="w-auto px-2 trans border-2 border-gray-700 bg-gray-700 text-white hover:bg-white hover:text-gray-700 rounded-lg text-center hover:cursor-pointer">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-                            </svg>
-                        </div>
-
-                    </div>
 
                     <!-- titles -->
                     <div class="flex mt-16 px-8 md:mx-72">
@@ -131,843 +132,27 @@
                             <label for="">Event</label>
                         </div>
                     </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row1" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">1</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row2" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">2</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row3" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">3</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row4" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">4</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row5" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">5</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row6" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">6</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row7" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">7</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row8" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">8</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row9" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">9</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row10" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">10</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row11" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">11</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row12" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">12</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row13" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">13</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row14" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">14</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row15" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">15</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row16" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">16</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row18" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">17</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row18" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">18</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row19" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">19</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row20" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">20</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row21" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">21</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row22" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">22</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row23" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">23</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row24" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">24</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row25" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">25</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row26" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">26</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row27" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">27</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row28" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">28</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <br>
-                    <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
-
-                    <div class="flex mt-2 px-8 md:mx-72">
-                        <!-- calendar body -->
-                        <div id="row29" class="flex w-full gap-3 md:gap-20">
-                            <div class="border-2 border-gray-700 rounded-lg">
-                                <div
-                                    class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
-                                    <!-- day 1 -->
-                                    <label for="">29</label>
-
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <!-- Event 1 -->
-                                <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                    <label class="bg-gray-700 text-white hp">Event Title</label>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                    <div id="row_30" class="">
+                    <!-- each events -->
+                    <div>
                         <br>
                         <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
 
                         <div class="flex mt-2 px-8 md:mx-72">
                             <!-- calendar body -->
-                            <div id="row30" class="flex w-full gap-3 md:gap-20">
-                                <div class="border-2 border-gray-700 rounded-lg">
+                            <div id="row1" class="flex w-full gap-3 md:gap-20">
+                                <div class="">
                                     <div
-                                        class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
+                                        class="flex items-center justify-center w-20 h-32 text-4xl font-bold text-white bg-gray-700 md:w-28 border-2 border-gray-700 rounded-lg">
                                         <!-- day 1 -->
-                                        <label for="">30</label>
+                                        <label for="">1</label>
 
                                     </div>
                                 </div>
                                 <div class="w-full">
                                     <!-- Event 1 -->
-                                    <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                        <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                        <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                        <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                        <label class="bg-gray-700 text-white hp">Event Title</label>
+                                    <div
+                                        class="bg-gray-700 border-gray-700 border-2 rounded-lg p-4 font-bold text-white text-xl h-32 flex items-center">
+                                        <a href="">International seminar on post covid diseases and treatment</a>
                                     </div>
                                 </div>
 
@@ -976,28 +161,27 @@
 
                         </div>
                     </div>
-                    <div id="row_31" class="">
+                    <!-- each events -->
+                    <div>
                         <br>
                         <div class="border-t-2 border-gray-700 mx-6 opacity-30 md:mx-72"></div>
 
                         <div class="flex mt-2 px-8 md:mx-72">
                             <!-- calendar body -->
-                            <div id="row31" class="flex w-full gap-3 md:gap-20">
-                                <div class="border-2 border-gray-700 rounded-lg">
+                            <div id="row1" class="flex w-full gap-3 md:gap-20">
+                                <div class="">
                                     <div
-                                        class="flex items-center justify-center w-20 h-24 text-4xl font-bold text-white bg-gray-700 md:w-28 md:h-full">
+                                        class="flex items-center justify-center w-20 h-32 text-4xl font-bold text-white bg-gray-700 md:w-28 border-2 border-gray-700 rounded-lg">
                                         <!-- day 1 -->
-                                        <label for="">31</label>
+                                        <label for="">15</label>
 
                                     </div>
                                 </div>
                                 <div class="w-full">
                                     <!-- Event 1 -->
-                                    <div class="bg-gray-700 border-gray-700 border-2 rounded-lg px-4 font-bold">
-                                        <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                        <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                        <label class="bg-gray-700 text-white hp">Event Title</label><br>
-                                        <label class="bg-gray-700 text-white hp">Event Title</label>
+                                    <div
+                                        class="bg-gray-700 border-gray-700 border-2 rounded-lg p-4 font-bold text-white text-xl h-32 flex items-center">
+                                        <a href="">Sports day</a>
                                     </div>
                                 </div>
 
@@ -1012,44 +196,54 @@
 
             </div><!-- end of monthly view-->
 
-            <div class="pt-10 pl-10 pr-10 h-full w-full md:px-56 hidden" id="dai-view"><!--Daily view-->
+            <div class="pt-10 pl-10 pr-10 h-full w-full md:px-56 hidden" id="dai-view">
+                <!--Daily view-->
                 <form action="">
-                <div class="bg-gray-700 text-white rounded-lg pb-2">
-                    <div class="flex justify-center gap-3 pt-3 font-semibold text-lg md:text-2xl">
-                        <div>
-                            <label for="" id="dv-day"></label>
+                    <div class="bg-gray-700 text-white rounded-lg pb-2">
+                        <div class="flex justify-center gap-3 pt-3 font-semibold text-lg md:text-2xl">
+                            <div>
+                                <label for="" id="dv-day"></label>
+                            </div>
+                            <div>
+                                <label for="" id="dv-month"></label>
+                            </div>
+                            <div>
+                                <label for="" id="dv-year"></label>
+                            </div>
                         </div>
-                        <div>
-                            <label for="" id="dv-month"></label>
+                        <!--content-->
+                        <div class="p-8 m-5 border-2 border-white rounded-lg">
+                            <div><label for="">Event Name</label></div>
+                            <div class="mt-3 text-sm"><label for="">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit. Illum, repellat?</label></div>
+                            <div class="mt-3"><label for="">Venue</label></div>
+                            <div class="mt-3"><label for="">Time</label></div>
                         </div>
-                        <div>
-                            <label for="" id="dv-year"></label>
+                        <div class="p-8 m-5 border-2 border-white rounded-lg">
+                            <div><label for="">Event Title</label></div>
+                            <div class="mt-3 text-sm"><label for="">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit. Illum, repellat?</label></div>
+                            <div class="mt-3"><label for="">Venue</label></div>
+                            <div class="mt-3"><label for="">Time</label></div>
+                        </div>
+                        <div class="p-8 m-5 border-2 border-white rounded-lg">
+                            <div><label for="">Event Title</label></div>
+                            <div class="mt-3 text-sm"><label for="">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit. Illum, repellat?</label></div>
+                            <div class="mt-3"><label for="">Venue</label></div>
+                            <div class="mt-3"><label for="">Time</label></div>
                         </div>
                     </div>
-                    <!--content-->
-                    <div class="p-8 m-5 border-2 border-white rounded-lg">
-                        <div><label for="">Event Name</label></div>
-                        <div class="mt-3 text-sm"><label for="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, repellat?</label></div>
-                        <div class="mt-3"><label for="">Venue</label></div>
-                        <div class="mt-3"><label for="">Time</label></div>
-                    </div>
-                    <div class="p-8 m-5 border-2 border-white rounded-lg">
-                        <div><label for="">Event Title</label></div>
-                        <div class="mt-3 text-sm"><label for="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, repellat?</label></div>
-                        <div class="mt-3"><label for="">Venue</label></div>
-                        <div class="mt-3"><label for="">Time</label></div>
-                    </div>
-                    <div class="p-8 m-5 border-2 border-white rounded-lg">
-                        <div><label for="">Event Title</label></div>
-                        <div class="mt-3 text-sm"><label for="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, repellat?</label></div>
-                        <div class="mt-3"><label for="">Venue</label></div>
-                        <div class="mt-3"><label for="">Time</label></div>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
+            <!-- upcoming -->
+            <div class="hidden p-36 ml-72" id="upcoming">
+                <h1 class="text-6xl">coming soooooooooon</h1>
             </div>
 
         </div>
+
+
 
         <div class="bg-gray-700 text-white mt-16">
             <!-- footer-->
@@ -1095,23 +289,25 @@
                     </div>
                 </div>
 
-            <div class="p-4">
-                <label for="" class="text-lg font-bold">Navigate</label>
-                <div class="mt-2 text-sm">
-                    <a href="" class="opacity-70 hover:opacity-100">About</a><br>
-                    <a href="" class="opacity-70 hover:opacity-100">Feedback</a><br>
-                    <a href="" class="opacity-70 hover:opacity-100">Search</a><br>
-                    <a href="" class="opacity-70 hover:opacity-100">Signup/Login</a>
+                <div class="p-4">
+                    <label for="" class="text-lg font-bold">Navigate</label>
+                    <div class="mt-2 text-sm">
+                        <a href="" class="opacity-70 hover:opacity-100">About</a><br>
+                        <a href="" class="opacity-70 hover:opacity-100">Feedback</a><br>
+                        <a href="" class="opacity-70 hover:opacity-100">Search</a><br>
+                        <a href="" class="opacity-70 hover:opacity-100">Signup/Login</a>
+                    </div>
                 </div>
+
             </div>
-            
-            </div> 
 
             <div class="text-center opacity-50">
-                <label for="">Copyright © <span><input type="text" id="cpyear" class="bg-gray-700 pointer-events-none w-10"></span> All rights reserved</label>
+                <label for="">Copyright © <span><input type="text" id="cpyear"
+                            class="bg-gray-700 pointer-events-none w-10"></span> All rights reserved</label>
             </div>
 
-        </div> <!--footer end-->
+        </div>
+        <!--footer end-->
     </div> <!-- main div end-->
     <script src="index.js"></script>
 </body>

@@ -75,47 +75,41 @@ else if (month == 11) {
 
 
 function next_month(){
-    const lastday=document.querySelector("#row_31")
-    const second_lastday=document.querySelector("#row_30")
     if(document.getElementById("month").value=="January"){
         document.getElementById("month").value="February"
-        lastday.classList.add("hidden")
-        second_lastday.classList.add("hidden")
     }else if(document.getElementById("month").value=="February"){
         document.getElementById("month").value="March"
-        second_lastday.classList.remove("hidden")
-        lastday.classList.remove("hidden")
+        
 
     }else if(document.getElementById("month").value=="March"){
         document.getElementById("month").value="April"
-        lastday.classList.add("hidden")
+        
     }else if(document.getElementById("month").value=="April"){
         document.getElementById("month").value="May"
-        lastday.classList.remove("hidden")
+        
     }else if(document.getElementById("month").value=="May"){
         document.getElementById("month").value="June"
-        lastday.classList.add("hidden")
+        
     }else if(document.getElementById("month").value=="June"){
         document.getElementById("month").value="July"
-        lastday.classList.remove("hidden")
+        
     }else if(document.getElementById("month").value=="July"){
         document.getElementById("month").value="August"
-        lastday.classList.remove("hidden")
+        
     }else if(document.getElementById("month").value=="August"){
         document.getElementById("month").value="September"
-        lastday.classList.add("hidden")
+        
     }else if(document.getElementById("month").value=="September"){
         document.getElementById("month").value="October"
-        lastday.classList.remove("hidden")
+        
     }else if(document.getElementById("month").value=="October"){
         document.getElementById("month").value="November"
-        lastday.classList.add("hidden")
+        
     }else if(document.getElementById("month").value=="November"){
         document.getElementById("month").value="December"
-        lastday.classList.remove("hidden")
+        
     }else if(document.getElementById("month").value=="December"){
         document.getElementById("month").value="January"
-        lastday.classList.remove("hidden")
     }
 }
 
@@ -127,46 +121,40 @@ function next_month(){
 
 
 function prev_month(){
-    const lastday=document.querySelector("#row_31")
-    const second_lastday=document.querySelector("#row_30")
     if(document.getElementById("month").value=="January"){
         document.getElementById("month").value="December"
-        lastday.classList.remove("hidden")
+        
     }else if(document.getElementById("month").value=="February"){
         document.getElementById("month").value="January"
-        lastday.classList.remove("hidden")
-        second_lastday.classList.remove("hidden")
+        
     }else if(document.getElementById("month").value=="March"){
         document.getElementById("month").value="February"
-        second_lastday.classList.add("hidden")
-        lastday.classList.add("hidden")
+        
     }else if(document.getElementById("month").value=="April"){
         document.getElementById("month").value="March"
-        lastday.classList.remove("hidden")
+       
     }else if(document.getElementById("month").value=="May"){
         document.getElementById("month").value="April"
-        lastday.classList.add("hidden")
+        
     }else if(document.getElementById("month").value=="June"){
         document.getElementById("month").value="May"
-        lastday.classList.remove("hidden")
+        
     }else if(document.getElementById("month").value=="July"){
         document.getElementById("month").value="June"
-        lastday.classList.add("hidden")
+        
     }else if(document.getElementById("month").value=="August"){
         document.getElementById("month").value="July"
-        lastday.classList.remove("hidden")
+        
     }else if(document.getElementById("month").value=="September"){
         document.getElementById("month").value="August"
-        lastday.classList.remove("hidden")
+        
     }else if(document.getElementById("month").value=="October"){
         document.getElementById("month").value="September"
-        lastday.classList.add("hidden")
     }else if(document.getElementById("month").value=="November"){
         document.getElementById("month").value="October"
-        lastday.classList.remove("hidden")
     }else if(document.getElementById("month").value=="December"){
         document.getElementById("month").value="November"
-        lastday.classList.add("hidden")
+
     }
 }
 
@@ -183,17 +171,32 @@ function next_year() {
 function monthClick(){
     const mv=document.querySelector('#mon-view');
     const dv=document.querySelector('#dai-view');
+    const uv=document.querySelector('#upcoming');
     if(mv.classList.contains('hidden')){
         mv.classList.remove('hidden');
-        dv.classList.add('hidden')
+        dv.classList.add('hidden');
+        uv.classList.add('hidden');
     }
 }
 function dailyClick(){
     const mv=document.querySelector('#mon-view');
     const dv=document.querySelector('#dai-view');
+    const uv=document.querySelector('#upcoming');
     if(dv.classList.contains('hidden')){
         dv.classList.remove('hidden');
-        mv.classList.add('hidden')
+        mv.classList.add('hidden');
+        uv.classList.add('hidden');
+    }
+}
+
+function upcomingView(){
+    const uv=document.querySelector('#upcoming')
+    const mv=document.querySelector('#mon-view');
+    const dv=document.querySelector('#dai-view');
+    if(uv.classList.contains('hidden')){
+        uv.classList.remove('hidden');
+        mv.classList.add('hidden');
+        dv.classList.add('hidden');
     }
 }
 
